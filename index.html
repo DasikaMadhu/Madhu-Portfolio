@@ -1,529 +1,707 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="google-site-verification" content="jX_p1MGq_t-5A4sCy68krb8MrBH8z2v3DFdfCWCMhro" />
+<meta name="description" content="Dasika Madhu Nimeshika — Software Developer & Researcher specializing in machine learning, data science, and energy systems.">
+<meta name="keywords" content="Dasika Madhu Nimeshika, Portfolio, Machine Learning, Data Science, Researcher, Salzburg, AWS, Python, Docker, Neo4j">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<title>Dasika Madhu Nimeshika's Profile</title>
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+<style>
+  /* ── Conferences Section ── */
+  .conferences { padding: 60px 0; }
+  .conferences .conference-item {
+    background: #fff;
+    border-left: 4px solid #149ddd;
+    border-radius: 0 8px 8px 0;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .conferences .conference-item:hover { box-shadow: 0 4px 20px rgba(20,157,221,0.15); }
+  .conferences .conference-item h4 { font-size: 15px; font-weight: 600; color: #173b6c; margin-bottom: 4px; }
+  .conferences .conference-item .conf-meta { font-size: 13px; color: #149ddd; font-weight: 500; margin-bottom: 4px; }
+  .conferences .conference-item p { font-size: 13px; color: #666; margin: 0; }
+  .conferences .conference-item a { color: #149ddd; text-decoration: none; }
+  .conferences .conference-item a:hover { text-decoration: underline; }
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="google-site-verification" content="jX_p1MGq_t-5A4sCy68krb8MrBH8z2v3DFdfCWCMhro" />
-    <meta name="description" content="Dasika Madhu Nimeshika's Profile">
-    <meta name="keywords" content="Dasika Madhu Nimeshika, Portfolio, Website, AWS, HTML, CSS, JavaScript, Bootstrap, Responsive">
-    
+  /* ── Cert badge chip ── */
+  .cert-source-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: #e8f4fd;
+    color: #149ddd;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .cert-source-badge.coursera { background: #e8f4fd; color: #0a67a3; }
+  .cert-source-badge.aws     { background: #fff3e0; color: #e07b00; }
+  .cert-source-badge.oracle  { background: #fce8e6; color: #c0392b; }
+  .cert-source-badge.linux   { background: #e8f5e9; color: #2e7d32; }
+  .cert-source-badge.fcc     { background: #f3e5f5; color: #6a1b9a; }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  /* ── Skills chips in About ── */
+  .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .skill-chip {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #149ddd33;
+    background: #f0f9ff;
+    color: #173b6c;
+    font-weight: 500;
+  }
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  /* ── Section nav highlight for conferences ── */
+  #navbar .nav-link[href="#conferences"] { }
+</style>
+</head>
+<body>
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
+<!-- ══════════════════════════════ Header ══════════════════════════════ -->
+<header id="header" class="d-flex flex-column justify-content-center">
+  <nav id="navbar" class="navbar nav-menu">
+    <ul>
+      <li><strong><a href="#hero"          class="nav-link scrollto active"><i class="bx bx-home"></i>        <span>Home</span></a></strong></li>
+      <li><strong><a href="#about"         class="nav-link scrollto"><i class="bx bx-user"></i>              <span>About</span></a></strong></li>
+      <li><strong><a href="#resume"        class="nav-link scrollto"><i class="bx bx-file-blank"></i>        <span>Resume</span></a></strong></li>
+      <li><strong><a href="#conferences"   class="nav-link scrollto"><i class="bx bx-microphone"></i>        <span>Conferences</span></a></strong></li>
+      <li><strong><a href="#certifications" class="nav-link scrollto"><i class="bx bx-server"></i>           <span>Certifications</span></a></strong></li>
+      <li><strong><a href="#portfolio"     class="nav-link scrollto"><i class="bx bx-book-content"></i>      <span>Portfolio</span></a></strong></li>
+      <li><strong><a href="https://dasikamadhu.github.io/AWS-from-A-to-Z/" class="nav-link scrollto" target="_blank"><i class="bi bi-cloud-fog2-fill"></i><span>AWS from A to Z</span></a></strong></li>
+      <li><strong><a href="https://madhue.medium.com" class="nav-link scrollto" target="_blank"><i class='bx bx-pen'></i><span>Blog</span></a></strong></li>
+    </ul>
+  </nav>
+</header>
+<!-- ══════════════════════════════ End Header ══════════════════════════════ -->
 
-    <title>Dasika Madhu Nimeshika's Profile</title>
+<!-- ══════════════════════════════ Hero ══════════════════════════════ -->
+<section id="hero" class="d-flex flex-column justify-content-center">
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <h1>Dasika Madhu Nimeshika</h1>
+    <p>
+      <span class="typed" data-typed-items="Researcher, Software Developer, Data Analyst, Java Practitioner, Conference Speaker"></span>
+    </p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dasika-madhu-nimeshika/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/DasikaMadhu"                      class="github"   target="_blank"><i class='bx bxl-github'></i></a>
+    </div>
+  </div>
+</section>
+<!-- ══════════════════════════════ End Hero ══════════════════════════════ -->
 
+<main id="main">
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-  </head>
-
-  <body>
-
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-    <!-- Header -->
-    <header id="header" class="d-flex flex-column justify-content-center">
-
-      <nav id="navbar" class="navbar nav-menu">
-        <ul>
-          <li><strong><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></strong></li>
-          <li><strong><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></strong></li>
-          <li><strong><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></strong></li>
-          <li><strong><a href="#certifications" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Certifications & Courses</span></a></strong></li>
-          <li><strong><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></strong></li>
-          <li><strong><a href="https://dasikamadhu.github.io/AWS-from-A-to-Z/" class="nav-link scrollto" target="_blank"><i class="bi bi-cloud-fog2-fill"></i><span>AWS from A to Z</span></a></strong></li>
-          <li><strong><a href="https://madhue.medium.com" class="nav-link scrollto" target="_blank"><i class='bx bx-pen'></i><span>Blog</span></a></strong></li>
-        </ul>
-      </nav>
-      <!-- nav-menu -->
-
-    </header>
-    <!-- End Header -->
-
-    <!-- Hero Section -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
-
-        <h1>Dasika Madhu Nimeshika</h1>
-
-        <p><span class="typed" data-typed-items=" <i class='bx bx-cloud'></i> 5x AWS Certified, <i class='bx bx-code-curly'></i> Java Certified, <i class='bx bxs-color-fill'></i> Web Designer, <i class='bx bx-code'></i> Computer Science Engineer"></span></p>
-
-        <div class="social-links">
-
-          <a href="https://www.linkedin.com/in/dasika-madhu-nimeshika/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/DasikaMadhu" class="github" target="_blank"><i class='bx bxl-github'></i></a>
-        </div>
+<!-- ══════════════════════════════ About ══════════════════════════════ -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>About</h2>
+      <p style="text-align: justify;">Versatile computer science engineer with 6+ years of experience spanning machine learning, software engineering, and data science. I translate complex analytical outputs into actionable insights such as building KPI-driven dashboards, forecasting models, and graph-based data systems. All the while working closely with stakeholders across research institutes, universities, and enterprises in Europe, the USA, and India.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-3">
+        <img src="assets/img/profile-img.jpg" class="section-img" alt="Dasika Madhu Nimeshika" align="left">
       </div>
-
-    </section>
-    <!-- End Hero -->
-
-    <main id="main">
-
-      <!-- About Section -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About</h2>
-            <p>Enthusiastic IT professional with three years of experience in cloud computing and web development, possessing proficient skills in Java and Python development.</p>
-            <p></p>
-          </div>
-          <div class="row">
-            <div class="col-lg-3">
-            </div>
-            <div class="col-lg-3">
-              <img src="assets/img/profile-img.jpg" class="section-img" alt="" align="left">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h5>Personal Information</h5>
-              <div class="col-lg-12">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email ID:</strong> <span>dasikamadhu@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Highest Educational Degree:</strong> <span>Master of Science</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Major:</strong> <span>Computer Science</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+      <div class="col-lg-6 pt-4 pt-lg-0 content">
+        <h5>Personal Information</h5>
+        <div class="col-lg-12">
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>    <span>dasikamadhu@gmail.com</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Schwaz, Austria</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>   <span>M.Sc. Computer Science (GPA 4.0 / 4.0)</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong><span>English (fluent) · German (A2, improving)</span></li>
+          </ul>
         </div>
-      </section><!-- End About Section -->
-
-      <!-- Resume Section -->
-      <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Resume</h2>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item"> 
-                <h4>Master of Science - Computer Science</h4>
-                <h5>August 2022 - December 2024</h5>
-                <p><em>Southern Illinois University, Carbondale</em></p>
-                <ul>
-                  <li>Pursued a comprehensive course curriculum encompassing - 
-                    <ul>
-                      <li>Linux, Software Engineering methodologies, and hands-on experience in Machine Learning and Soft Computing.</li>
-                      <li>Acquired expertise in Operating Systems, applying algorithms for data analysis and problem-solving.</li>
-                      <li> Delved into the intricacies of Computer Security, emphasizing secure system design and threat mitigation strategies.</li>
-                      <li> Computational Statistics helped me hone analytical skills for data-driven decision-making.</li>
-                      <li> Explored cutting-edge technologies through coursework in Deep Learning and Computational Blockchain, gaining practical insights into neural network architectures and decentralized ledger systems.</li>
-                    </ul>
-                  <li>Graduate Project - Skin Cancer Classification using Transfer Learning</li>
-                  <ul>
-                    <li>Accurately identify skin cancer images, achieving 98% classification accuracy for various skin lesion classes.</li>
-                    <li>The model, trained on three pre-trained Keras Convolution Neural Network models, demonstrated 97% recall and 98% precision.</li>
-                    <li>Evaluation metrics like true negatives, false positives, and loss further confirm the model's effectiveness in identifying skin diseases, using predictions on the HAM1000 dataset."</li>
-                  </ul>
-              </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Bachelor of Technology - Computer Science and Engineering</h4>
-                <h5>August 2015 - May 2019</h5>
-                <p><em>Swami Vivekananda Institute of Technology, Hyderabad</em></p>
-                <ul>
-                  <li>I gained a solid foundation in programming languages such as C, Java, and Python.</li>
-                  <li>The curriculum covered essential topics, including Data Structures, Design and Analysis of Algorithms, Design Patterns, Database Management, Data Warehousing, Data Mining, Software Engineering, and Software Testing Methodologies.</li>
-              </ul>
-            </div>
-            <h3 class="resume-title">Assistantship</h3>
-            <div class="resume-item">
-              <h4>Graduate Assistant</h4>
-              <h5>Aug 2022 - Dec 2023</h5>
-              <p><em>Network Engineering, Office of Information Technology, Southern Illinois University</em></p>
-              <ul>
-                <li>Configuring switches (Dell, Cisco, and Extreme) to optimize network performance.</li>
-                <li>Configuring Extreme access points to enhance wireless network capabilities.</li>
-                <li>Managing and maintaining the functionality of existing DNS, DHCP, and Nagios servers for seamless and reliable network operations.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Engineer</h4>
-              <h5>Feb 2021 - July 2022</h5>
-              <p><em>Virtusa Corporation, Hyderabad, Telangana</em></p>
-              <ul>
-                <li>Java Developer - Citi Bank</li>
-                <ul>
-                  <li>Contributed to the TCOM application development and project maintenance</li>
-                  <li>Responsibilities included debugging, and optimizing Java-based functionalities and Jenkins pipelines </li>
-                  <li>Collaborating with cross-functional teams to integrate various components seamlessly, enhancing the overall performance and reliability of the application</li>
-                </ul>
-                <li>Android Support and Maintenance Engineer - Virgin Money Android application </li>
-                <ul>
-                  <li>Addressed incidents using ServiceNow and utilized Kibana logs to identify and resolve various customer issues, encompassing challenges related to login, logout, money transfers, check deposits, and more.</li>
-                </ul>
-              </ul>
-              <ul>
-                <li>SharePoint Developer - Mashreq Bank</li>
-                <ul>
-                  <li>Supported senior developers in the on-time development and delivery of an intranet portal at Mashreq Bank.</li>
-                  <li>Created release artifacts for thorough developer testing.</li>
-                  <li>Facilitated knowledge transfer to the client's support team and internal stakeholders, focusing on SharePoint out-of-the-box (OOTB) features.</li>
-                  <li>Played a key role in supporting regular releases, addressing UI issues during development (DEV) testing, user acceptance testing (UAT), and major production releases.</li>
-                  <li>Expanded contributions beyond the assigned scope by creating impactful graphical content for clients.</li>
-                  <li>Developed design presentations for clients and account managers, enhancing project communication and stakeholder engagement.</li>
-                </ul>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Associate Engineer</h4>
-              <h5>Aug 2019 - Jan 2021</h5>
-              <p><em>Virtusa Corporation, Hyderabad, Telangana</em></p>
-              <ul>
-                <li>Java Developer with hands-on training in various technologies.</li>
-                <li>Successfully built a robust E-Commerce application and a carpooling website utilizing Java 8, Spring MVC, Hibernate, Maven, and MVC Design Patterns.</li>
-                <li>Demonstrated proficiency in integrating databases, including MySQL and Oracle, to enhance application functionality.</li>
-                <li>Applied HTML, CSS, and JavaScript to create user-friendly and responsive web interfaces.</li>
-                <li>Facilitated knowledge sharing among colleagues through presentaions on AWS cloud services and MVC Design Patterns.</li>
-              </ul>
-            </div>
-            <h3 class="resume-title">Internship</h3>
-            <div class="resume-item">
-              <h4>Business Analyst Intern</h4>
-              <h5>Jun 2018 - Aug 2018</h5>
-              <p><em>Deloitte Touche Tohmatsu, Hyderabad, Telangana</em></p>
-              <ul>
-                <li>Utilizing Robotic Process Automation tools such as UiPath and BluePrism for streamlined processes.</li>
-                <li>Creating automated scripts to efficiently migrate substantial data volumes from Excel sheets to cloud platforms.</li>
-                <li>Collaborating seamlessly with teams spread across diverse locations in India to ensure the timely delivery of project objectives.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Java</span>
+          <span class="skill-chip">Machine Learning</span>
+          <span class="skill-chip">Technical Writing</span>
+          <span class="skill-chip">Grafana / InfluxDB</span>
+          <span class="skill-chip">Neo4j</span>
+          <span class="skill-chip">REST API / OpenAPI 3.0</span>
+          <span class="skill-chip">Linux</span>
+          <span class="skill-chip">Git</span>
+          <span class="skill-chip">Exploratory Data Analysis</span>
+          <span class="skill-chip">Data Visualization</span>
         </div>
-      </div>
-    </section>
-    <!-- End Resume Section -->
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Certifications and Courses</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/SAA.pdf" width="100%" height="150%" />AWS Solutions Architect - Associate</a></h4>
-              <ul>
-                <li>Re-Certified</li>
-                <li>Issue Date - 3 Mar 2020</li>
-                <li>Expiration Date - 3 Mar 2023</li>
-                <li>Validation Number - ZYKW4TYC3MVEQR5D</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/SAP.pdf" width="100%" height="100%" />AWS Solutions Architect - Professional</a></h4>
-              <ul>
-                <li>Issue Date -  9 Mar 2021</li>
-                <li>Expiration Date - 9 Mar 2024</li>
-                <li>Validation Number - C4VTR92DKBVEQ1GN</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/DevOps.pdf" width="100%" height="100%" />AWS DevOps Engineer - Professional</a></h4>
-              <ul>
-                <li>Issue Date - 2 Jun 2021</li>
-                <li>Expiration Date - 2 Jun 2024</li>
-                <li>Validation Number - 9B1KVKYJLB44QQCT</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/SysOps.pdf" width="100%" height="100%" />AWS Sysops Administrator - Associate</a></h4>
-              <ul>
-                <li>Issue Date - 9 Mar 2021</li>
-                <li>Expiration Date - 9 Mar 2024</li>
-                <li>Validation Number - C4VTR92DKBVEQ1GN</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/ML.pdf" width="100%" height="100%" />AWS Machine Learning - Speciality</a></h4>
-              <ul>
-                <li>Issue Date - 24 Sept 2021</li>
-                <li>Expiration Date - 24 Sept 2024</li>
-                <li>Validation Number - 0PD7DVXLM2VEQWGH</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/OracleJavaCertification.pdf" width="100%" height="100%" />Oracle Certified Associate</h4>
-              <ul>
-                <li>Issue Date - 15 Mar 2022</li>
-                <li>Issued By - Oracle University</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/LinuxDev.png" width="100%" height="100%"/>Linux for Developers</a></h4>
-              <ul>
-                <li>Issue Date - 27 Nov 2020</li>
-                <li>Issued By - The Linux Foundation</li>
-                <li>Grade - 98.50%</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/FCC.png" width="100%" height="100%" />Responsive Web Design</h4>
-              <ul>
-                <li>Issue Date - 26 Mar 2021</li>
-                <li>Issued By - FreeCodeCamp</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/Well-Architected-Bootcamp.png" width="100%" height="100%"/>AWS Well-Architected Bootcamp</a></h4>
-              <ul>
-                <li>Issue Date - 23 Mar 2022</li>
-                <li>Issued By - AWS Traning and Certification</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/well-architected-proficient.png" width="70%" height="70%"/><br>
-              AWS Well-Architected Proficient</a></h4>
-              <ul>
-                <li>Issue Date - 1 Feb 2022</li>
-                <li>Issued By - AWS Traning and Certification</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/aws-partner-cloud-economics-accreditation.png" width="70%" height="70%"/><br>AWS Partner: Cloud Economics Accreditation</a></h4>
-              <ul>
-                <li>Issue Date - 30 Jan 2022</li>
-                <li>Issued By - AWS Traning and Certification</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/aws-partner-accreditation-business.png" width="70%" height="70%"/><br>AWS Partner: Accreditation (Business)</a></h4>
-              <ul>
-                <li>Issue Date - 9 Jun 2021</li>
-                <li>Issued By - AWS Traning and Certification</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <h4><embed src="assets/pdf/aws-partner-accreditation-technical.png" width="70%" height="70%"/><br>AWS Partner: Accreditation (Technical)</a></h4>
-              <ul>
-                <li>Issue Date - 7 Feb 2021</li>
-                <li>Issued By - AWS Traning and Certification</li>
-              </ul> 
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- End Certifications Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Projects Portfolio</h2>
-          <p>Projects I created for certifications and for fun!</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-one">One-Page Websites</li>
-              <li data-filter=".filter-fcc">FreeCodeCamp</li>
-              <li data-filter=".filter-web">Responsive Websites</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/awsfromatoz.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>AWS from A to Z</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/AWS-from-A-to-Z/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/quote-gen.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Quote Generator</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/QuoteGenerator/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-one filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/responsivewebpage.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>One Page Responsive Website</h4>
-                <div class="portfolio-links">
-                  <a href="https://main.dsuzxmwmo38n9.amplifyapp.com" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
-            <div class="portfolio-wrap">
-              <img src="assets/img/personalportfolio.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FreeCodeCamp - Personal Portfolio</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/fCC-PersonalPortfolio/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
-            <div class="portfolio-wrap">
-              <img src="assets/img/mlk.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FreeCodeCamp - Tribute Page</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/fCC-TributePage/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
-            <div class="portfolio-wrap">
-              <img src="assets/img/productlandingpage.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FreeCodeCamp - Basic Product Landing Page</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/fCC-ProductLandingPage/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
-            <div class="portfolio-wrap">
-              <img src="assets/img/surveyform.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FreeCodeCamp - Survey Form</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/fCC-SurveyForm/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
-            <div class="portfolio-wrap">
-              <img src="assets/img/techdoc.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>FreeCodeCamp - Technical Documentation</h4>
-                <div class="portfolio-links">
-                  <a href="https://dasikamadhu.github.io/fCC-TechnicalDocumentation/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- End Portfolio Section -->
-
-  </main>
-  <!-- end #main -->
-
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-
-      <h3>Dasika Madhu Nimeshika</h3>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/dasika-madhu-nimeshika/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://twitter.com/xxMadBluexx" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-        <a href="https://github.com/DasikaMadhu" class="github" target="_blank"><i class='bx bxl-github'></i></a>
-        <a href="https://dev.to/madhue" class="dev.to" target="_blank"><i class='bx bxl-dev-to' ></i></a>
-      </div>
-      <div class="copyright">
-        &copy; &nbsp;<strong><span>Made by Dasika Madhu Nimeshika</span></strong>
       </div>
     </div>
-  </footer>
-  <!-- End Footer -->
+  </div>
+</section>
+<!-- ══════════════════════════════ End About ══════════════════════════════ -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- ══════════════════════════════ Resume ══════════════════════════════ -->
+<section id="resume" class="resume">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Resume</h2>
+    </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <div class="row">
+      <!-- ── LEFT COLUMN ── -->
+      <div class="col-lg-6">
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+        <h3 class="resume-title">Education</h3>
 
+        <!-- ══ M.Sc. Resume Item ══ -->
+<div class="resume-item">
+  <h4>M.Sc. Computer Science</h4>
+  <h5>August 2022 – December 2023</h5>
+  <p><em>Southern Illinois University, Carbondale, IL, USA</em></p>
+  <ul>
+
+    <li>
+      <strong>GPA:</strong> 4.0 / 4.0 &nbsp;·&nbsp; 30 credit hours &nbsp;·&nbsp; Graduate School
+    </li>
+
+    <li>
+      <strong>Coursework</strong> — all grades: A
+      <ul>
+        <li><em>Fall 2022 —</em> Software Engineering · Linux/UNIX Programming · Machine Learning &amp; Soft Computing</li>
+        <li><em>Spring 2023 —</em> Computer Security · Advanced Operating Systems · Computational Statistics II</li>
+        <li><em>Summer 2023 —</em> Advanced Python Programming</li>
+        <li><em>Fall 2023 —</em> Computational Blockchain · Deep Learning · Graduate Project (Capstone)</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Capstone:</strong> Skin Cancer Classification on the HAM10000 dataset using CNN &amp; Transfer Learning —
+      98% classification accuracy, 97% recall, 98% precision across 7 lesion classes (10,015 images).
+      <ul>
+        <li>
+          Built a custom CNN block (<code>blockred</code>) fusing Inception-style 1×1 convolutions,
+          VGG-style stacked 3×3 convolutions, and SqueezeNet channel reduction — merged via
+          element-wise addition into one skip-connected residual block, trained on 28×28 RGB images.
+        </li>
+        <li>
+          Fine-tuned ResNet152V2 (ImageNet weights, layers 555+ unfrozen) with a custom classification head:
+          Flatten → BatchNorm → Dense(128/ReLU) → Dropout(0.5) → Softmax(7).
+          VGG19 and EfficientNetB7 pipelines were also implemented and prepared.
+        </li>
+        <li>
+          Implemented Grad-CAM heatmap visualization using VGG16 (block5_conv3) to surface which
+          skin regions drove predictions, supporting clinical interpretability.
+        </li>
+        <li>
+          Resolved severe class imbalance (melanocytic nevi: 67%+ of dataset) using
+          <code>RandomOverSampler</code> and data augmentation (rotation, zoom, shear, horizontal flip).
+        </li>
+        <li>
+          Applied stepped learning-rate scheduling (1e-3 → 1e-4 at epoch 30 → 1e-5 at epoch 50)
+          with <code>ModelCheckpoint</code> saving only best <code>val_acc</code> weights.
+        </li>
+        <li>
+          <em>Stack:</em> Python · TensorFlow/Keras · ResNet152V2 · VGG19 · EfficientNetB7 ·
+          OpenCV · scikit-learn · imbalanced-learn · Matplotlib · Seaborn · Pandas · NumPy
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</div>
+
+        <div class="resume-item">
+          <h4>B.Tech. Computer Science &amp; Engineering</h4>
+          <h5>August 2015 – May 2019</h5>
+          <p><em>Swami Vivekananda Institute of Technology, Hyderabad, India</em></p>
+          <ul>
+            <li>Core subjects: Data Structures, Algorithms, Design Patterns, DBMS, Data Mining, Software Engineering &amp; Testing.</li>
+            <li>Languages studied: C, Java, Python.</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Graduate Assistantship</h3>
+
+        <div class="resume-item">
+          <h4>Network Engineering Graduate Assistant</h4>
+          <h5>Aug 2022 – Dec 2023</h5>
+          <p><em>Office of Information Technology, Southern Illinois University</em></p>
+          <ul>
+            <li>Administered Linux-based network services (DNS, DHCP, Nagios) and configured Dell, Cisco, and Extreme network devices across campus infrastructure.</li>
+            <li>Led a team of 6–8 student employees to deliver a campus-wide Ethernet mapping project enabling 911 location tracking for a Federal mandate on Microsoft Teams VoIP rollout.</li>
+            <li>Extended reliable wireless coverage to 1,000+ dormitory residents by deploying and configuring Extreme access points.</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Internship</h3>
+
+        <div class="resume-item">
+          <h4>Business Analyst Intern</h4>
+          <h5>Jun 2018 – Aug 2018</h5>
+          <p><em>Deloitte Touche Tohmatsu LLC, Hyderabad, India</em></p>
+          <ul>
+            <li>Automated data migration from Excel to Oracle Cloud using UiPath and BluePrism (RPA), reducing manual processing time significantly.</li>
+            <li>Coordinated cross-functional stakeholders across finance and IT for end-to-end RPA deployment.</li>
+          </ul>
+        </div>
+
+      </div><!-- /col-lg-6 -->
+
+      <!-- ── RIGHT COLUMN ── -->
+      <div class="col-lg-6">
+
+        <h3 class="resume-title">Professional Experience</h3>
+
+        <!-- ── SALZBURG RESEARCH ── -->
+        <div class="resume-item">
+          <h4>Researcher</h4>
+          <h5>March 2024 – December 2025</h5>
+          <p><em>Salzburg Research Forschungsgesellschaft m.b.H., Salzburg, Austria</em></p>
+
+          <p><strong>AUTARKITY — Autarky in Energy Communities</strong></p>
+          <ul>
+            <li>Processed and analysed smart-meter household data to track community self-sufficiency KPIs and communicated findings to project stakeholders.</li>
+            <li>Developed and optimised an LSTM time-series forecasting model predicting household and community-level energy consumption and PV production 96 quarter-hour intervals (24 hours) ahead.</li>
+            <li>Built a real-time Grafana / InfluxDB monitoring dashboard for live community energy flow tracking, enabling self-serve data insights without technical support.</li>
+            <li>Created interactive visualisations surfacing actionable recommendations: peak demand response windows, seasonal gap analysis, and grid dependency reduction strategies.</li>
+            <li>Applied data-driven findings to operational decisions, including determining residents' willingness to pay to join an energy community.</li>
+          </ul>
+
+          <p><strong>ESCADE — Energy-Efficient Large-Scale AI for Sustainable Data Centers</strong></p>
+          <ul>
+            <li>Analysed energy-aware workload allocation and benchmarked performance across edge-cloud distributed AI systems, translating findings into deployment recommendations.</li>
+            <li>Automated heterogeneous infrastructure scenario generation via Python scripts with randomised network parameters, enabling scalable simulation of production environments.</li>
+            <li>Implemented a declarative Prolog-based optimisation engine (FogBrainX) for service placement on edge-cloud hardware, balancing latency, bandwidth, carbon footprint, and cost simultaneously.</li>
+            <li>Designed an interactive HTML/CSS dashboard visualising service-node mappings, energy consumption, carbon emissions, and costs.</li>
+          </ul>
+
+          <p><strong>KIRAMET — AI-based Recycling of Metal Compound Waste</strong></p>
+          <ul>
+            <li>Architected a modular Digital Product Passport system in Java and Neo4j, containerised with Docker, modelling complex part-material hierarchies for end-of-life vehicles aligned with EU circular economy mandates.</li>
+            <li>Designed a Neo4j graph data model with CAS/IUPAC identifiers enabling regulatory-grade tracking of materials, elements, and weights across the automotive supply chain.</li>
+            <li>Delivered Catena-X-compliant RESTful APIs using OpenAPI 3.0 and Swagger UI, standardising data exchange across OEMs, recyclers, and regulators.</li>
+            <li>Implemented a constraint-driven linear integer programming engine to automate sorting, containerisation, and recycling workflows.</li>
+          </ul>
+        </div>
+
+        <!-- ── VIRTUSA ── -->
+        <div class="resume-item">
+          <h4>Software Engineer</h4>
+          <h5>Aug 2019 – July 2022</h5>
+          <p><em>Virtusa Corporation, Hyderabad, India</em></p>
+          <ul>
+            <li><strong>Java Developer – Citi Bank:</strong> Contributed to the TCOM platform; managed CI/CD pipelines with Jenkins for a high-availability banking system.</li>
+            <li><strong>Android Support Engineer – Virgin Money:</strong> Resolved production incidents using ServiceNow and Kibana log analysis, maintaining SLA compliance for a mobile banking application.</li>
+            <li><strong>SharePoint Developer – Mashreq Bank:</strong> Delivered coordinated releases for an enterprise intranet portal; facilitated knowledge transfer to client stakeholders.</li>
+          </ul>
+        </div>
+
+      </div><!-- /col-lg-6 -->
+    </div><!-- /row -->
+  </div>
+</section>
+<!-- ══════════════════════════════ End Resume ══════════════════════════════ -->
+
+<!-- ══════════════════════════════ Conferences ══════════════════════════════ -->
+<section id="conferences" class="conferences section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Conferences &amp; Publications</h2>
+      <p>Peer-reviewed research presented at international conferences in AI, edge computing, and sustainable manufacturing.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="conference-item">
+          <div class="conf-meta">DCAI 2025 · Lille, France</div>
+          <h4>Energy-aware Placement of AI Applications in an Edge-Cloud Continuum with Neuromorphic Chips</h4>
+          <p>ESCADE project — presented edge-cloud AI workload placement strategies incorporating neuromorphic hardware for sustainable data centres. <a href="#" target="_blank">View paper ↗</a></p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="conference-item">
+          <div class="conf-meta">HSCE 2025 · Chania, Greece</div>
+          <h4>Digital Product Passports for Optimized Metal Recycling</h4>
+          <p>KIRAMET project — presented the Digital Product Passport architecture for end-of-life vehicle material tracking aligned with EU circular economy mandates.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="conference-item">
+          <div class="conf-meta">ISM 2025 · Malta</div>
+          <h4>On the Utilization of Digital Product Passports for Intelligent Metal Sorting and Recycling</h4>
+          <p>KIRAMET project — detailed the constraint-driven optimisation engine for automated metal sorting and containerisation workflows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════════════════════════ End Conferences ══════════════════════════════ -->
+
+<!-- ══════════════════════════════ Certifications ══════════════════════════════ -->
+<section id="certifications" class="certifications">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Certifications &amp; Courses</h2>
+    </div>
+
+    <div class="row">
+
+      <!-- ── Oracle ── -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/OracleJavaCertification.pdf" width="100%" height="100%"/>Java SE 8 Oracle Certified Associate</h4>
+          <ul>
+            <li>Issue Date – 15 Mar 2022</li>
+            <li>Issued by – Oracle Corporation</li>
+          </ul>
+          <span class="cert-source-badge oracle">Oracle</span>
+        </div>
+      </div>
+
+      <!-- ── Coursera ── -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/Google-DA.pdf" width="100%" height="100%"/>Google Data Analytics Professional</h4>
+          <ul>
+            <li>Issue Date – 22 July 2024</li>
+            <li>Issued by – Google / Coursera</li>
+          </ul>
+          <span class="cert-source-badge coursera">Coursera</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/ExceltoBI.pdf" width="100%" height="100%"/>From Excel to Power BI</h4>
+          <ul>
+            <li>Issue Date – 12 Aug 2024</li>
+            <li>Issued by – Coursera</li>
+          </ul>
+          <span class="cert-source-badge coursera">Coursera</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/DA-Python.pdf" width="100%" height="100%"/>Data Analysis with Python</h4>
+          <ul>
+            <li>Issue Date – 12 Aug 2024</li>
+            <li>Issued by – Coursera</li>
+          </ul>
+          <span class="cert-source-badge coursera">Coursera</span>
+        </div>
+      </div>
+
+      <!-- ── Linux Foundation ── -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/LinuxDev.png" width="100%" height="100%"/>Linux for Developers</h4>
+          <ul>
+            <li>Issue Date – 27 Nov 2020</li>
+            <li>Issued by – The Linux Foundation / Coursera</li>
+            <li>Grade – 98.50%</li>
+          </ul>
+          <span class="cert-source-badge linux">Linux Foundation</span>
+        </div>
+      </div>
+
+      <!-- ── freeCodeCamp ── -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/FCC.png" width="100%" height="100%"/>Responsive Web Design</h4>
+          <ul>
+            <li>Issue Date – 26 Mar 2021</li>
+            <li>Issued by – freeCodeCamp</li>
+          </ul>
+          <span class="cert-source-badge fcc">freeCodeCamp</span>
+        </div>
+      </div>
+
+      <!-- ── AWS ── -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/SAA.pdf" width="100%" height="150%"/>AWS Solutions Architect – Associate</h4>
+          <ul>
+            <li>Re-Certified</li>
+            <li>Issue Date – 3 Mar 2020</li>
+            <li>Expiry – 3 Mar 2023</li>
+            <li>Validation No. – ZYKW4TYC3MVEQR5D</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/SAP.pdf" width="100%" height="100%"/>AWS Solutions Architect – Professional</h4>
+          <ul>
+            <li>Issue Date – 9 Mar 2021</li>
+            <li>Expiry – 9 Mar 2024</li>
+            <li>Validation No. – C4VTR92DKBVEQ1GN</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/DevOps.pdf" width="100%" height="100%"/>AWS DevOps Engineer – Professional</h4>
+          <ul>
+            <li>Issue Date – 2 Jun 2021</li>
+            <li>Expiry – 2 Jun 2024</li>
+            <li>Validation No. – 9B1KVKYJLB44QQCT</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/SysOps.pdf" width="100%" height="100%"/>AWS SysOps Administrator – Associate</h4>
+          <ul>
+            <li>Issue Date – 9 Mar 2021</li>
+            <li>Expiry – 9 Mar 2024</li>
+            <li>Validation No. – C4VTR92DKBVEQ1GN</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/ML.pdf" width="100%" height="100%"/>AWS Machine Learning – Speciality</h4>
+          <ul>
+            <li>Issue Date – 24 Sept 2021</li>
+            <li>Expiry – 24 Sept 2024</li>
+            <li>Validation No. – 0PD7DVXLM2VEQWGH</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/Well-Architected-Bootcamp.png" width="100%" height="100%"/>AWS Well-Architected Bootcamp</h4>
+          <ul>
+            <li>Issue Date – 23 Mar 2022</li>
+            <li>Issued by – AWS Training and Certification</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/well-architected-proficient.png" width="70%" height="70%"/><br>AWS Well-Architected Proficient</h4>
+          <ul>
+            <li>Issue Date – 1 Feb 2022</li>
+            <li>Issued by – AWS Training and Certification</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/aws-partner-cloud-economics-accreditation.png" width="70%" height="70%"/><br>AWS Partner: Cloud Economics Accreditation</h4>
+          <ul>
+            <li>Issue Date – 30 Jan 2022</li>
+            <li>Issued by – AWS Training and Certification</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/aws-partner-accreditation-business.png" width="70%" height="70%"/><br>AWS Partner: Accreditation (Business)</h4>
+          <ul>
+            <li>Issue Date – 9 Jun 2021</li>
+            <li>Issued by – AWS Training and Certification</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box">
+          <h4><embed src="assets/pdf/aws-partner-accreditation-technical.png" width="70%" height="70%"/><br>AWS Partner: Accreditation (Technical)</h4>
+          <ul>
+            <li>Issue Date – 7 Feb 2021</li>
+            <li>Issued by – AWS Training and Certification</li>
+          </ul>
+          <span class="cert-source-badge aws">AWS</span>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+<!-- ══════════════════════════════ End Certifications ══════════════════════════════ -->
+
+<!-- ══════════════════════════════ Portfolio ══════════════════════════════ -->
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Websites Projects Portfolio</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <ul id="portfolio-flters">
+          <li data-filter="*"           class="filter-active">All</li>
+          <li data-filter=".filter-one">One-Page Sites</li>
+          <li data-filter=".filter-fcc">freeCodeCamp</li>
+          <li data-filter=".filter-web">Responsive Websites</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="assets/img/awsfromatoz.png" class="img-fluid" alt="AWS from A to Z">
+          <div class="portfolio-info">
+            <h4>AWS from A to Z — Sketch Notes</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/AWS-from-A-to-Z/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="assets/img/quote-gen.png" class="img-fluid" alt="Quote Generator">
+          <div class="portfolio-info">
+            <h4>Quote Generator</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/QuoteGenerator/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-one filter-web">
+        <div class="portfolio-wrap">
+          <img src="assets/img/responsivewebpage.png" class="img-fluid" alt="One Page Responsive Website">
+          <div class="portfolio-info">
+            <h4>One Page Responsive Website</h4>
+            <div class="portfolio-links">
+              <a href="https://main.dsuzxmwmo38n9.amplifyapp.com" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
+        <div class="portfolio-wrap">
+          <img src="assets/img/personalportfolio.png" class="img-fluid" alt="FCC Personal Portfolio">
+          <div class="portfolio-info">
+            <h4>freeCodeCamp – Personal Portfolio</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/fCC-PersonalPortfolio/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
+        <div class="portfolio-wrap">
+          <img src="assets/img/mlk.png" class="img-fluid" alt="FCC Tribute Page">
+          <div class="portfolio-info">
+            <h4>freeCodeCamp – Tribute Page</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/fCC-TributePage/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
+        <div class="portfolio-wrap">
+          <img src="assets/img/productlandingpage.png" class="img-fluid" alt="FCC Product Landing Page">
+          <div class="portfolio-info">
+            <h4>freeCodeCamp – Product Landing Page</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/fCC-ProductLandingPage/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
+        <div class="portfolio-wrap">
+          <img src="assets/img/surveyform.png" class="img-fluid" alt="FCC Survey Form">
+          <div class="portfolio-info">
+            <h4>freeCodeCamp – Survey Form</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/fCC-SurveyForm/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-fcc">
+        <div class="portfolio-wrap">
+          <img src="assets/img/techdoc.png" class="img-fluid" alt="FCC Technical Documentation">
+          <div class="portfolio-info">
+            <h4>freeCodeCamp – Technical Documentation</h4>
+            <div class="portfolio-links">
+              <a href="https://dasikamadhu.github.io/fCC-TechnicalDocumentation/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Visit site"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /portfolio-container -->
+  </div>
+</section>
+<!-- ══════════════════════════════ End Portfolio ══════════════════════════════ -->
+
+</main><!-- end #main -->
+
+<!-- ══════════════════════════════ Footer ══════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <h3>Dasika Madhu Nimeshika</h3>
+    <p style="color:#aaa;font-size:13px;margin:4px 0 12px;">"Tech-driven, human-inspired."</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/dasika-madhu-nimeshika/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://twitter.com/xxMadBluexx"                    class="twitter"  target="_blank"><i class="bx bxl-twitter"></i></a>
+      <a href="https://github.com/DasikaMadhu"                     class="github"   target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="https://madhue.medium.com"                          class="medium"   target="_blank"><i class='bx bxl-medium'></i></a>
+      <a href="https://dev.to/madhue"                              class="dev.to"   target="_blank"><i class='bx bxl-dev-to'></i></a>
+    </div>
+    <div class="copyright">&copy;&nbsp;<strong><span>Made by Dasika Madhu Nimeshika</span></strong></div>
+  </div>
+</footer>
+<!-- ══════════════════════════════ End Footer ══════════════════════════════ -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 </body>
-
 </html>
