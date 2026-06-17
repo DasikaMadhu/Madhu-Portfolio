@@ -185,34 +185,6 @@
     <li>
       <strong>Capstone:</strong> Skin Cancer Classification on the HAM10000 dataset using CNN &amp; Transfer Learning —
       98% classification accuracy, 97% recall, 98% precision across 7 lesion classes (10,015 images).
-      <ul>
-        <li>
-          Built a custom CNN block (<code>blockred</code>) fusing Inception-style 1×1 convolutions,
-          VGG-style stacked 3×3 convolutions, and SqueezeNet channel reduction — merged via
-          element-wise addition into one skip-connected residual block, trained on 28×28 RGB images.
-        </li>
-        <li>
-          Fine-tuned ResNet152V2 (ImageNet weights, layers 555+ unfrozen) with a custom classification head:
-          Flatten → BatchNorm → Dense(128/ReLU) → Dropout(0.5) → Softmax(7).
-          VGG19 and EfficientNetB7 pipelines were also implemented and prepared.
-        </li>
-        <li>
-          Implemented Grad-CAM heatmap visualization using VGG16 (block5_conv3) to surface which
-          skin regions drove predictions, supporting clinical interpretability.
-        </li>
-        <li>
-          Resolved severe class imbalance (melanocytic nevi: 67%+ of dataset) using
-          <code>RandomOverSampler</code> and data augmentation (rotation, zoom, shear, horizontal flip).
-        </li>
-        <li>
-          Applied stepped learning-rate scheduling (1e-3 → 1e-4 at epoch 30 → 1e-5 at epoch 50)
-          with <code>ModelCheckpoint</code> saving only best <code>val_acc</code> weights.
-        </li>
-        <li>
-          <em>Stack:</em> Python · TensorFlow/Keras · ResNet152V2 · VGG19 · EfficientNetB7 ·
-          OpenCV · scikit-learn · imbalanced-learn · Matplotlib · Seaborn · Pandas · NumPy
-        </li>
-      </ul>
     </li>
 
   </ul>
